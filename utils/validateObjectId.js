@@ -3,6 +3,6 @@ function validateObjectId(id) {
   if (!mongoose.Types.ObjectId.isValid(id)) {
     throw new Error(`Invalid Id...${id}`);
   }
-  return;
+  return true;
 }
 module.exports = { validateObjectId };
