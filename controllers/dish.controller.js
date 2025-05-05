@@ -37,7 +37,7 @@ async function getDishById(req, res) {
 
 async function updateOneDish(req, res) {
   try {
-    validateObjectId();
+    validateObjectId(req.params.id);
     const dish = await Dish.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
     });

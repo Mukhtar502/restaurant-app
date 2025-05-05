@@ -1,6 +1,7 @@
 const { validateObjectId } = require("../utils/validateObjectId");
 
 async function validateId(req, res, next) {
+    
   try {
     validateObjectId(req.params.id);
     next();
