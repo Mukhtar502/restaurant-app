@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 //routes
 app.use("/api/auth", authRoutes);
 app.use("/api/dishes", dishRoutes);
-// app.use("/api/orders/", orderRoutes)
+app.use("/api/orders/", orderRoutes);
 const server = http.createServer(app);
 async function startServer() {
   await connectDB();
