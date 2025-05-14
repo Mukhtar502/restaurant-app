@@ -14,8 +14,8 @@ async function createOrder(req, res) {
       }
       totalPrice += dish.price * eachDish.quantity;
     }
-    const order = new order({
-      user: req.user.userId,
+    const order = new Order({
+      user: req.user._id,
       dishes,
       totalPrice,
     });
